@@ -91,7 +91,7 @@ header h1 {
   text-align: center;
 }
 
-header h1:hover {
+header h1:hover, header h1:active {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-transition: all 0.5s ease-out;
@@ -133,7 +133,7 @@ figure img {
   border: 20px solid white;
 }
 
-figure img:hover {
+figure img:hover, figure img:active {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-transition: all 0.5s ease-out;

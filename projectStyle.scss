@@ -76,7 +76,7 @@ header {
         align-items: center;
         text-align: center;
 
-        &:hover {
+        &:hover, &:active {
             transform: translateY(-10px);
             transition: all 0.5s ease-out;
         }
@@ -114,7 +114,7 @@ figure {
         width: auto;
         border: 20px solid white;
 
-        &:hover {
+        &:hover, &:active {
             transform: translateY(-10px);
             transition: all 0.5s ease-out;
         }
