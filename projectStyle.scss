@@ -140,25 +140,29 @@ aside {
 
 footer {
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: gray;
 
-    p {
-        color: white;
-        font-size: 2em;
-    }
-
-    a {
-        @include relativePositionFive(15px);
-        text-decoration: none;
-        font-size: 1.8em;
-        color: white;   
-
-        i {
-            padding: 5px;
+    .container {
+        @include relativePositionFive(3.5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        p {
+            color: white;
+            font-size: 2em;
+        }
+    
+        a {
+            @include relativePositionFive(15px);
+            text-decoration: none;
+            font-size: 1.8em;
+            color: white;   
+    
+            i {
+                padding: 5px;
+            }
         }
     }
 }
