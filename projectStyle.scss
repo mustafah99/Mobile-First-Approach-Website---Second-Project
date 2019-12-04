@@ -30,7 +30,7 @@
     }
 }
 
-$desktop: 568px;
+$desktop: 500px;
 @mixin desktop {
     @media screen and (min-width: #{$desktop}) {
         @content;
