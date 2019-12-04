@@ -44,8 +44,6 @@
           animation-delay: 6ms;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   max-width: 414px;
 }
 
