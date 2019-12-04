@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* @mixin with a keyword argument with a name of $bottom. */
+@mixin relativePositionFive($bottom) {
+    position: relative;
+    bottom: $bottom; /* Keyword argument is passed through this property. */
+}
+
+* {
+    max-width: 414px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    @include relativePositionFive(2%);
+    h1 {
+        font-size: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:hover {
+            transform: translateY(-10px);
+            transition: all 0.5s ease-out;
+        }
+    }
+}
+
+article {
+    margin: 0 auto;
+    /* Keyword argument for our @mixin is passed between the parentheses and set as "bottom: 5%". */
+    @include relativePositionFive(5%); /* Whatever value we pass inside these parentheses will be set as our "bottom" property value for this specific element. */
+
+    section {
+
+        p {
+            padding: 50px;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 1.4em;
+            word-wrap: break-word;
+            margin: 10px auto;
+        }
+    }
+}
+
+figure {
+    margin: 0 auto;
+    background: gray;
+    padding: 20px 0;
+    padding-top: 30px;
+    text-align: center;
+    @include relativePositionFive(3%);
+    
+    img {
+        height: 300px;
+        width: auto;
+        border: 20px solid white;
+
+        &:hover {
+            transform: translateY(-10px);
+            transition: all 0.5s ease-out;
+        }
+    }
+
+    figcaption {
+        font-size: 1.3em;
+        color: white;
+        padding: 0 50px;
+        padding-top: 5px;
+    }
+}
+
+aside {
+    padding: 0 100px;
+    @include relativePositionFive(2%);
+    
+    p {
+        font-size: 1.5em;
+    }
+}
+
+footer {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+
+    p {
+        color: white;
+        font-size: 2em;
+    }
+}

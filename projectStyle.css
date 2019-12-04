@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+/* @mixin with a keyword argument with a name of $bottom. */
+* {
+  max-width: 414px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: relative;
+  bottom: 2%;
+  /* Keyword argument is passed through this property. */
+}
+
+header h1 {
+  font-size: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+header h1:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+article {
+  margin: 0 auto;
+  /* Keyword argument for our @mixin is passed between the parentheses and set as "bottom: 5%". */
+  position: relative;
+  bottom: 5%;
+  /* Keyword argument is passed through this property. */
+  /* Whatever value we pass inside these parentheses will be set as our "bottom" property value for this specific element. */
+}
+
+article section p {
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.4em;
+  word-wrap: break-word;
+  margin: 10px auto;
+}
+
+figure {
+  margin: 0 auto;
+  background: gray;
+  padding: 20px 0;
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  bottom: 3%;
+  /* Keyword argument is passed through this property. */
+}
+
+figure img {
+  height: 300px;
+  width: auto;
+  border: 20px solid white;
+}
+
+figure img:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+figure figcaption {
+  font-size: 1.3em;
+  color: white;
+  padding: 0 50px;
+  padding-top: 5px;
+}
+
+aside {
+  padding: 0 100px;
+  position: relative;
+  bottom: 2%;
+  /* Keyword argument is passed through this property. */
+}
+
+aside p {
+  font-size: 1.5em;
+}
+
+footer {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+}
+
+footer p {
+  color: white;
+  font-size: 2em;
+}
+/*# sourceMappingURL=projectStyle.css.map */
