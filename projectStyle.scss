@@ -6,6 +6,31 @@
     bottom: $bottom; /* Keyword argument is passed through this property. */
 }
 
+@mixin flowDown {
+    animation-name: flowDown;
+    animation-duration: 1s;
+    animation-delay: 6ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flowDown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1.0;
+    }
+}
+
 $desktop: 568px;
 @mixin desktop {
     @media screen and (min-width: #{$desktop}) {
@@ -21,6 +46,7 @@ $iphoneFive: 320px;
 }
 
 * {
+    @include flowDown;
     max-width: 414px;
     @include desktop {
         max-width: 100%;
