@@ -141,7 +141,7 @@ aside {
 footer {
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: gray;
@@ -149,5 +149,16 @@ footer {
     p {
         color: white;
         font-size: 2em;
+    }
+
+    a {
+        @include relativePositionFive(15px);
+        text-decoration: none;
+        font-size: 1.8em;
+        color: white;   
+
+        i {
+            padding: 5px;
+        }
     }
 }
