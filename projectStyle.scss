@@ -6,8 +6,28 @@
     bottom: $bottom; /* Keyword argument is passed through this property. */
 }
 
+$desktop: 768px;
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+$iphoneFive: 320px;
+@mixin mobile {
+    @media screen and (max-width: #{$iphoneFive}) {
+        @content;
+    }
+}
+
 * {
     max-width: 414px;
+    @include desktop {
+        max-width: 100%;
+    }
+    @include mobile {
+        max-width: 100%;
+    }
 }
 
 html,
