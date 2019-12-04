@@ -6,7 +6,7 @@
     bottom: $bottom; /* Keyword argument is passed through this property. */
 }
 
-$desktop: 768px;
+$desktop: 568px;
 @mixin desktop {
     @media screen and (min-width: #{$desktop}) {
         @content;
